@@ -130,20 +130,3 @@ else:
 
 st.markdown("---")
 st.markdown("Debug Version 2")
-```
-
-**Key Changes in this Version:**
-
-1.  **`webrtc_streamer` Call:**
-    * `video_processor_factory` is explicitly set to `None`.
-    * `on_error` argument is removed.
-    * A new `key` is used (`affective-ai-debug-noproc`) to prevent state conflicts.
-    * Added `print` statements before and after the call.
-    * Wrapped the call in a `try...except` block to catch immediate errors during initialization.
-2.  **Processor Class:** The `AffectiveAIDebugProcessor` class definition remains, but it's no longer passed to `webrtc_streamer`.
-3.  **UI Text:** Updated button labels and descriptions to reflect that this version attempts to show the *raw* stream without processing.
-
-**Please try this version.**
-
-* **If it works** (you see your raw webcam feed): The `TypeError` is related to the `AffectiveAIDebugProcessor` class or the `handle_error` function. The next step would be to re-introduce the processor *without* inheriting from `VideoProcessorBase` or simplify the `handle_error` function.
-* **If it still fails with the same `TypeError` at the same line:** This is more puzzling. It might indicate a deeper issue within `streamlit-webrtc` or its interaction with other libraries/environment on Hugging Face Spaces, possibly related to the other arguments like `rtc_configuration` or `media_stream_constraints`. Check the Hugging Face logs and browser console very carefully for any clu
