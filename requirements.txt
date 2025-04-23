@@ -1,28 +1,10 @@
-# Core Streamlit framework
-streamlit
-
-# Real-time webcam/mic component for Streamlit
-streamlit-webrtc
-
-# Python bindings for FFmpeg (dependency for streamlit-webrtc)
-av
-
-# Core Computer Vision & Image Handling
-opencv-python-headless # Use headless for server environments
-
-# Real-time Facial and Iris Tracking
-mediapipe
-
-# Audio Feature Extraction
-librosa
-
-# Numerical Processing
-numpy
-
-# Data Handling and CSV Output
-pandas
-
-# Note: Sounddevice might not be needed if streamlit-webrtc handles audio capture.
-# Using opencv-python-headless is often better for deployment environments
-# like Hugging Face Spaces as it avoids potential display server issues.
-# Ensure FFmpeg library is available in the deployment environment if `av` requires it.
+streamlit 
+opencv-python 
+numpy pandas 
+matplotlib 
+mediapipe 
+deepface 
+librosa 
+sounddevice 
+scipy 
+plotly
