@@ -410,8 +410,3 @@ elif not st.session_state.get('run_analysis', False):
 
 st.markdown("---")
 st.markdown("Developed as a demonstration. Use ethically and responsibly.")
-```
-
-I've removed the multi-line comment block that contained the problematic apostrophe. Please try running this updated version. It should resolve the `SyntaxError`.
-
-Remember that this version is still in the simplified debug mode (`DEBUG_MODE = True` within the `AffectiveAIProcessor` class). If the stream runs stably now, the next step is to set `DEBUG_MODE = False` and uncomment the metrics display block to re-enable the full analys
