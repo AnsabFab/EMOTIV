@@ -1,6 +1,7 @@
 streamlit 
 opencv-python-headless
-streamlit-webrtc av
+streamlit-webrtc 
+av
 numpy 
 pandas 
 matplotlib 
